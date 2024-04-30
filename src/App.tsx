@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '@/logo.svg';
+import '@/App.css';
+
+import { Button, Space } from 'antd-mobile'
 
 function App() {
   return (
@@ -19,6 +21,31 @@ function App() {
           Learn React
         </a>
       </header>
+      
+      <Space wrap>
+        <Button color='primary' fill='solid'>
+          Solid
+        </Button>
+        <Button color='primary' fill='outline'>
+          Outline
+        </Button>
+        <Button color='primary' fill='none'>
+          None
+        </Button>
+      </Space>
+      <Space wrap>
+        <Button
+          onClick={() => {
+            alert('hello.')
+          }}
+        >
+          Default
+        </Button>
+        <Button color='primary'>Primary</Button>
+        <Button color='success'>Success</Button>
+        <Button color='danger'>Danger</Button>
+        <Button color='warning'>Warning</Button>
+      </Space>
     </div>
   );
 }
